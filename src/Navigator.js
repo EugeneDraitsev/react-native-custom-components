@@ -550,7 +550,7 @@ var Navigator = createReactClass({
     this.state.transitionFromIndex = this.state.presentedIndex;
     this.state.presentedIndex = destIndex;
     this.state.transitionCb = cb;
-    this._onAnimationStart();
+    sonAnimationStart();
     if (AnimationsDebugModule) {
       AnimationsDebugModule.startRecordingFps();
     }
@@ -725,7 +725,7 @@ var Navigator = createReactClass({
 
   _clearTransformations: function(sceneIndex) {
     const defaultStyle = flattenStyle([DEFAULT_SCENE_STYLE]);
-    this._sceneRefs[sceneIndex].setNativeProps({ style: defaultStyle });
+    this._sceneRefs[sceneIndex] && this._sceneRefs[sceneIndex].setNativeProps({ style: defaultStyle });
   },
 
   _onAnimationStart: function() {
