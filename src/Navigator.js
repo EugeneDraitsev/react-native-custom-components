@@ -550,7 +550,7 @@ var Navigator = createReactClass({
     this.state.transitionFromIndex = this.state.presentedIndex;
     this.state.presentedIndex = destIndex;
     this.state.transitionCb = cb;
-    sonAnimationStart();
+    this._onAnimationStart();
     if (AnimationsDebugModule) {
       AnimationsDebugModule.startRecordingFps();
     }
